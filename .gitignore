@@ -1,4 +1,9 @@
 *.log
 *.pot
 *.pyc
-local_settings.py
+
+dist/*
+build
+django_epiced.egg-info/*
+
+_build
