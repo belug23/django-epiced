@@ -22,7 +22,7 @@ Quick start
 
     INSTALLED_APPS = (
         ...
-        'polls',
+        'epiced',
     )
 
 3. Use it in your model ::

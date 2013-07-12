@@ -8,7 +8,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-epiced',
-    version='0.2',
+    version='0.2.1',
     packages=['epiced'],
     include_package_data=True,
     license='BSD License',
