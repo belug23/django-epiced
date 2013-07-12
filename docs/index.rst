@@ -1,7 +1,4 @@
-.. Django-EpicEd documentation master file, created by
-   sphinx-quickstart on Thu Jul 11 21:36:30 2013.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. _index:
 
 Welcome to Django-EpicEd's documentation
 ========================================
@@ -15,7 +12,7 @@ are 'container' and 'textarea' since they are rewriten by the wideget and
 are needed to save the data to the database.
 
 Contents
-
+--------
 
 .. toctree::
    :maxdepth: 2
