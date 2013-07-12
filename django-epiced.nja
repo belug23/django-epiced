@@ -1,0 +1,31 @@
+{
+  "mainFile": "", 
+  "use-tabs": false, 
+  "venv": "/home/belug/.virtualenvs/oss/bin/python", 
+  "relatedProjects": [], 
+  "name": "django-epiced", 
+  "license": "New BSD License", 
+  "url": "", 
+  "pythonPath": "python", 
+  "preExecScript": "", 
+  "additional_builtins": [], 
+  "programParams": "", 
+  "indentation": 4, 
+  "PYTHONPATH": "", 
+  "supported-extensions": [
+    ".py", 
+    ".html", 
+    ".jpg", 
+    ".png", 
+    ".ui", 
+    ".css", 
+    ".json", 
+    ".js", 
+    ".ini", 
+    ".rst", 
+    ".in"
+  ], 
+  "project-type": "", 
+  "postExecScript": "", 
+  "description": ""
+}

@@ -1,0 +1,14 @@
+<p><div id="{{ field_id }}_epiceditor">{{ value }}</div><textarea{{ final_attrs|safe }}>{{ value }}</textarea></p>
+
+
+<script type="text/javascript">
+    //Hiding the textarea
+    var {{ field_id }}_textarea = document.getElementById("{{ field_id }}");
+    {{ field_id }}_textarea.style.display = 'none';
+
+    var {{ field_id }}_opts = {{ config|safe }};
+    {{ field_id }}_opts["parser"] = {{ parser }};
+    {{ field_id }}_opts["basePath"] = "{{ request.build_absolute_uri }}"+{{ field_id }}_opts["basePath"];
+    var {{ field_id }}_editor = new EpicEditor({{ field_id }}_opts);
+    {{ field_id }}_editor.load()
+</script>
