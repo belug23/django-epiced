@@ -19,56 +19,10 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   about
    configurations
    widgetusage
 
 
-Installing
-----------
 
-To install with pip ::
-
-    pip install django-epiceditor
-
-To install from source ::
-
-    git clone https://github.com/belug23/django-epiced.git
-    cd django-epiced
-    python setup.py install
-
-From source::
-
-    wget https://github.com/belug23/django-epiced/archive/0.2.tar.gz
-    tar -zxvf 0.2.tar.gz
-    cd django-epiced
-    python setup.py install
-
-Using in django
----------------
-
-Add it to your installed apps::
-
-    INSTALLED_APPS = (
-        ...
-        'epiced',
-    )
-
-and then use it to your model::
-
-    from epiced.models import EpicEditorField
-
-    class Post(models.Model):
-        article = EpicEditorField()
-        ...
-
-
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 
