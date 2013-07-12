@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Django-EpicEd's documentation!
-=========================================
+Welcome to Django-EpicEd's documentation
+========================================
 
 EpicEd is a markdown field with the default widjet using EpicEditor.js
 http://epiceditor.com/
@@ -14,7 +14,8 @@ EpicEditor.js configurations the only settings you'll not be able to edit
 are 'container' and 'textarea' since they are rewriten by the wideget and
 are needed to save the data to the database.
 
-Contents:
+Contents
+
 
 .. toctree::
    :maxdepth: 2
