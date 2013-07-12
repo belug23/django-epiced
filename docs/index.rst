@@ -36,7 +36,8 @@ To install from source ::
     cd django-epiced
     python setup.py install
 
-From source :
+From source::
+
     wget https://github.com/belug23/django-epiced/archive/0.2.tar.gz
     tar -zxvf 0.2.tar.gz
     cd django-epiced
@@ -45,14 +46,14 @@ From source :
 Using in django
 ---------------
 
-Add it to your installed apps ::
+Add it to your installed apps::
 
     INSTALLED_APPS = (
         ...
         'epiced',
     )
 
-and then use it to your model ::
+and then use it to your model::
 
     from epiced.models import EpicEditorField
 
