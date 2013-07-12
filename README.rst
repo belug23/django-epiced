@@ -51,6 +51,8 @@ Quick start
 8. Enjoy a markdown editor that won't break your html!
 
 
+Form more read the documentation at : http://django-epiced.readthedocs.org
+
 Thanks
 ------
 
