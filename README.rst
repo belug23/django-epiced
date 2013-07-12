@@ -56,11 +56,16 @@ Form more read the documentation at : http://django-epiced.readthedocs.org
 Thanks
 ------
 
-I'd like to thank Oscar Godson and John Donahue for EpicEditor : http://epiceditor.com/
+I'd like to thank John Gruber and Aaron Swartz.for the markdown language
+http://daringfireball.net/projects/markdown/
 
-Thanks to carljm creator of this snippet : http://djangosnippets.org/snippets/882/ used to complete the EpicEditorField
+Thanks to Oscar Godson and John Donahue for EpicEditor : http://epiceditor.com/
 
-and Shaun Sephton for creating the django-ckeditor that inspired the widget associated with the field https://github.com/shaunsephton/django-ckeditor
+Thanks to carljm creator of this snippet :
+http://djangosnippets.org/snippets/882/ used to complete the EpicEditorField
+
+and Shaun Sephton for creating the django-ckeditor that inspired the widget
+associated with the field https://github.com/shaunsephton/django-ckeditor
 
 
 
