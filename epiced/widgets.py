@@ -11,7 +11,7 @@ import json
 DEFAULT_EPICEDITOR_CONFIG = {
     "container": 'epiceditor',
     "textarea": None,
-    "basePath": settings.STATIC_URL + 'epiced/',
+    "basePath": settings.STATIC_URL + 'epiced',
     "clientSideStorage": False,
     "localStorageName": 'epiceditor',
     "useNativeFullscreen": True,
@@ -22,9 +22,9 @@ DEFAULT_EPICEDITOR_CONFIG = {
         "autoSave": 100
     },
     "theme": {
-        "base": 'themes/base/epiceditor.css',
-        "preview": 'themes/preview/preview-dark.css',
-        "editor": 'themes/editor/epic-dark.css'
+        "base": '/themes/base/epiceditor.css',
+        "preview": '/themes/preview/preview-dark.css',
+        "editor": '/themes/editor/epic-dark.css'
     },
     "button": {
         "preview": True,

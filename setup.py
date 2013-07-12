@@ -8,13 +8,13 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-epiced',
-    version='0.1',
+    version='0.2',
     packages=['epiced'],
     include_package_data=True,
     license='BSD License',
     description='A Django app to add the EpicEditor with easy to use widget.',
     long_description=README,
-    url='http://github,com/belug/',
+    url='https://github.com/belug23/django-epiced',
     author='Belug',
     author_email='belug@oss.cx',
     classifiers=[
