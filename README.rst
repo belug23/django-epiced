@@ -69,3 +69,6 @@ associated with the field https://github.com/shaunsephton/django-ckeditor
 
 
 
+.. image:: https://cruel-carlota.pagodabox.com/3b76f31ab8defaf2e21114eb1575a220
+    :alt: githalytics.com
+    :target: http://githalytics.com/belug23/django-epiced
