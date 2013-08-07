@@ -15,6 +15,9 @@ setup(
     description='A Django app to add the EpicEditor with easy to use widget.',
     long_description=README,
     url='https://github.com/belug23/django-epiced',
+    install_requires=[
+        'markdown',
+    ],
     author='Belug',
     author_email='belug@oss.cx',
     classifiers=[
