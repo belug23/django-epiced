@@ -70,10 +70,14 @@ associated with the field https://github.com/shaunsephton/django-ckeditor
 History
 -------
 
+*0.3.1* ::
+
+    - Updated to Epic Editor 0.2.2
+
 *0.3.0* ::
 
     *Attention, since it's so easy to use this pluggin I've changed the default
-    escaping of the HTML, Please refer to the documentation.
+    escaping of the HTML, Please refer to the documentation.*
     - Security update : now html is escaped by default
     - Added the automatic install of Markdown (Thanks daikeren for the patch)
     - Added formsets support (Thanks szuliq for the bug repport)
