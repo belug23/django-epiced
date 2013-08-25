@@ -15,7 +15,7 @@ Warning
 
 Since Version 0.3.0 the html escaping of in markdown is now at true by default.
 If you want to add HTML tags in your content add 'safe_mode=False' in the field
-options. PLEASE becareful with that do not desable html escaping in public
+options. *PLEASE becareful* with that, do not desable html escaping in public
 fields.
 
 Quick start
@@ -83,7 +83,7 @@ History
 
 *0.3.0* ::
 
-    *Attention, since it's so easy to use this pluggin I've changed the default
+    *Warning, since it's so easy to use this pluggin I've changed the default
     escaping of the HTML, Please refer to the documentation.*
     - Security update : now html is escaped by default
     - Added the automatic install of Markdown (Thanks daikeren for the patch)
