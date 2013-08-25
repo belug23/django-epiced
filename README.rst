@@ -10,6 +10,13 @@ EpicEditor.js configurations the only settings you'll not be able to edit
 are 'container' and 'textarea' since they are rewriten by the wideget and
 are needed to save the data to the database.
 
+Warning
+-------
+
+Since Version 0.3.0 the html escaping of in markdown is now a true by default.
+If you want to add HTML tags in your content add 'safe_mode=False' in the field
+options. PLEASE becareful with that do not desable html escaping in public
+fields.
 
 Quick start
 -----------
