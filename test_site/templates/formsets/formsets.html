@@ -1,0 +1,13 @@
+{% load static %}
+<html>
+    <head>
+        <title>Formsets test page</title>
+
+        <script src="{% static 'epiced/js/epiceditor.js' %}"></script>
+    </head>
+    <body>
+        {% for form in formset %}
+            {{ form.as_table }}
+        {% endfor %}
+    </body>
+</html>

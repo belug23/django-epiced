@@ -86,6 +86,7 @@ class EpicEditorWidget(forms.Textarea):
             'final_attrs': flatatt(final_attrs),
             'parser': self.config['parser'],
             'field_id': final_attrs['id'],
+            'editor_id': final_attrs['id'].replace('-', '_'),
             'value': conditional_escape(force_unicode(value)),
             'config': json.JSONEncoder().encode(self.config)
         }))

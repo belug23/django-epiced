@@ -73,3 +73,4 @@ EpicEditorField::
     text = EpicEditorField(configs={"focusOnLoad": False})
 
     content = forms.CharField(widget=EpicEditorWidget(configs={"focusOnLoad": False}))
+

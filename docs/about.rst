@@ -38,5 +38,16 @@ and then use it to your model::
     from epiced.models import EpicEditorField
 
     class Post(models.Model):
+        ...
         article = EpicEditorField()
         ...
+
+by default the field will escape all the HTML saved, to use it with HTML
+you need to add a safe_mode parameter::
+
+    from epiced.models import EpicEditorField
+
+    class Post(models.Model):
+        article = EpicEditorField(safe_mode=False)
+
+for more information look at http://pythonhosted.org/Markdown/reference.html#safe_mode

@@ -1,0 +1,15 @@
+{% load static %}
+<html>
+    <head>
+        <title>Formsets test page</title>
+
+        <script src="{% static 'epiced/js/epiceditor.js' %}"></script>
+    </head>
+    <body>
+        {% for post in post_list %}
+            {{ post.title }}
+            {{ post.description_test|safe }}
+            {{ post.article_html|safe }}
+        {% endfor %}
+    </body>
+</html>

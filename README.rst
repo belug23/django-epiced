@@ -67,7 +67,32 @@ http://djangosnippets.org/snippets/882/ used to complete the EpicEditorField
 and Shaun Sephton for creating the django-ckeditor that inspired the widget
 associated with the field https://github.com/shaunsephton/django-ckeditor
 
+History
+-------
 
+*0.3.0* ::
+
+    *Attention, since it's so easy to use this pluggin I've changed the default
+    escaping of the HTML, Please refer to the documentation.
+    - Security update : now html is escaped by default
+    - Added the automatic install of Markdown (Thanks daikeren for the patch)
+    - Added formsets support (Thanks szuliq for the bug repport)
+    - Added small test_site for debugging
+    - Updated documentation for the security update
+
+*0.2.1* ::
+
+    Typo correction in the documentation
+
+*0.2.0* ::
+
+    bug fixes: Double slashes in images url
+    Typos
+
+
+*0.1.0* ::
+
+    First Release
 
 .. image:: https://cruel-carlota.pagodabox.com/3b76f31ab8defaf2e21114eb1575a220
     :alt: githalytics.com
