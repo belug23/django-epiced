@@ -15,7 +15,7 @@ Warning
 
 Since Version 0.3.0 the html escaping of in markdown is now at true by default.
 If you want to add HTML tags in your content add 'safe_mode=False' in the field
-options. **PLEASE becareful** with that, do not desable html escaping in public
+options. **PLEASE becareful** with that, do not disable html escaping in public
 fields.
 
 Quick start
