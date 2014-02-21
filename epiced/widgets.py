@@ -39,8 +39,44 @@ DEFAULT_EPICEDITOR_CONFIG = {
     "string": {
         "togglePreview": 'Toggle Preview Mode',
         "toggleEdit": 'Toggle Edit Mode',
-        "toggleFullscreen": 'Enter Fullscreen'
-    }
+        "toggleFullscreen": 'Enter Fullscreen',
+        "showHelp": 'Show Help'
+    },
+    "button_bar_plugin": '',
+    "default_help":  '''Heading <br/>
+                        ======= <br/>
+                        <br/>
+                        Sub-heading<br/>
+                        -----------<br/>
+                        <br/>
+                        Paragraphs are separated<br/>
+                        by a blank line.<br/>
+                        <br/>
+                        Text attributes *italic*,<br/>
+                        **bold**, `monospace`.<br/>
+                        <br/>
+                        A [link](http://example.com).<br/>
+                        <br/>
+                        Shopping list:<br/>
+                        <br/>
+                          * apples<br/>
+                          * oranges<br/>
+                          * pears<br/>
+                        <br/>
+                        Numbered list:<br/>
+                        <br/>
+                          1. apples<br/>
+                          2. oranges<br/>
+                          3. pears)<br/>
+                          <br/>
+                          <br/>
+                          <p>Source: http://en.wikipedia.org/wiki/Markdown</p>
+                          
+                        ''',
+    "custom_help": '',
+    "override_default_help": False,
+    "help_width": 350,
+    "help_height": 600,
 }
 
 
@@ -88,5 +124,6 @@ class EpicEditorWidget(forms.Textarea):
             'field_id': final_attrs['id'],
             'editor_id': final_attrs['id'].replace('-', '_'),
             'value': conditional_escape(force_unicode(value)),
-            'config': json.JSONEncoder().encode(self.config)
+            'config': json.JSONEncoder().encode(self.config),
+            'button_bar_plugin': mark_safe(self.config['button_bar_plugin']),
         }))

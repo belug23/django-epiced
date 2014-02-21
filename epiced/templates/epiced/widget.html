@@ -1,3 +1,7 @@
+{% load static %}
+
+{{ button_bar_plugin }}
+ 
 <p><div id="{{ field_id }}_epiceditor">{{ value }}</div><textarea{{ final_attrs|safe }}>{{ value }}</textarea></p>
 
 
@@ -5,7 +9,7 @@
     //Hiding the textarea
     var {{ editor_id }}_textarea = document.getElementById("{{ field_id }}");
     {{ editor_id }}_textarea.style.display = 'none';
-
+    
     var {{ editor_id }}_opts = {{ config|safe }};
     {{ editor_id }}_opts["parser"] = {{ parser }};
     {{ editor_id }}_opts["basePath"] = "{{ request.build_absolute_uri }}"+{{ editor_id }}_opts["basePath"];
