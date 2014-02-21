@@ -347,6 +347,7 @@
         , string: { togglePreview: 'Toggle Preview Mode'
           , toggleEdit: 'Toggle Edit Mode'
           , toggleFullscreen: 'Enter Fullscreen'
+          , showHelp: 'Show Help'
           }
         , parser: typeof marked == 'function' ? marked : null
         , autogrow: false
@@ -555,6 +556,7 @@
                   '<iframe frameborder="0" id="epiceditor-editor-frame"></iframe>' +
                   '<iframe frameborder="0" id="epiceditor-previewer-frame"></iframe>' +
                   '<div id="epiceditor-utilbar">' +
+                    (self._fullscreenEnabled ? '<button title="' + this.settings.string.showHelp + '" class="epiceditor-help-btn"></button>' : '') +
                     (self._previewEnabled ? '<button title="' + this.settings.string.togglePreview + '" class="epiceditor-toggle-btn epiceditor-toggle-preview-btn"></button> ' : '') +
                     (self._editEnabled ? '<button title="' + this.settings.string.toggleEdit + '" class="epiceditor-toggle-btn epiceditor-toggle-edit-btn"></button> ' : '') +
                     (self._fullscreenEnabled ? '<button title="' + this.settings.string.toggleFullscreen + '" class="epiceditor-fullscreen-btn"></button>' : '') +
@@ -783,7 +785,28 @@
 
       self.emit('fullscreenenter');
     };
+    
+    self._showHelp = function () {
+      
+          var w = self.settings.help_width;
+          var h = self.settings.help_height;
+          
+          var left = (screen.width/2)-(w/2);
+          var top = (screen.height/2)-(h/2);
+          
+          var win = window.open('', 'Help', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+          
+          var custom_help = self.settings.custom_help;
 
+          //If overriding custom help
+          if (self.settings.override_default_help) {
+              win.document.body.innerHTML = (custom_help);
+          } else {
+              win.document.body.innerHTML = (self.settings.default_help + custom_help);
+          }
+    };
+          
+      
     self._exitFullscreen = function (el) {
       this._fixScrollbars();
 
@@ -858,6 +881,9 @@
       }
       else if (targetClass.indexOf('epiceditor-fullscreen-btn') > -1) {
         self._goFullscreen(fsElement);
+      }
+      else if (targetClass.indexOf('epiceditor-help-btn') > -1) {
+        self._showHelp();
       }
     });
 
