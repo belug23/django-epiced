@@ -28,6 +28,12 @@ documentation for more information''')
         self.configs = kwargs.pop("configs", None)
         super(EpicEditorField, self).__init__(*args, **kwargs)
 
+    def deconstruct(self):
+        name, path, args, kwargs = super(EpicEditorField, self).deconstruct()
+        path = 'django.db.models.TextField'
+        print name, path, args, kwargs
+        return name, path, args, kwargs
+
     def contribute_to_class(self, cls, name):
         self._html_field = "%s%s" % (name, self._html_field_suffix)
         models.TextField(editable=False).contribute_to_class(
@@ -55,7 +61,9 @@ documentation for more information''')
 class EpicEditorFormField(forms.fields.Field):
 
     def __init__(self, configs=None, *args, **kwargs):
-        kwargs.update({'widget': EpicEditorWidget(configs=configs)})
+        #Support for the max_length option Django 1.7
+        max_length = kwargs.pop('max_length', None)
+        kwargs.update({'widget': EpicEditorWidget(configs=configs, max_length=max_length)})
         super(EpicEditorFormField, self).__init__(*args, **kwargs)
 
 try:
