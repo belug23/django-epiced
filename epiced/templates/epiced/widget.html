@@ -1,4 +1,4 @@
-<p><div id="{{ field_id }}_epiceditor">{{ value }}</div><textarea{{ final_attrs|safe }}>{{ value }}</textarea></p>
+<p><div id="{{ field_id }}_epiceditor">{{ value }}</div><textarea{{ final_attrs|safe }} {% if maxlength %}maxlength={{maxlength}} {% endif %}>{{ value }}</textarea></p>
 
 
 <script type="text/javascript">

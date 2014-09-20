@@ -3,7 +3,7 @@ from django.conf import settings
 from django.template.loader import render_to_string
 from django.utils.safestring import mark_safe
 from django.utils.html import conditional_escape
-from django.utils.encoding import force_unicode
+from django.utils.encoding import force_text
 from django.core.exceptions import ImproperlyConfigured
 from django.forms.util import flatatt
 import json
@@ -64,10 +64,11 @@ class EpicEditorWidget(forms.Textarea):
                     STATIC_URL setting. This setting specifies a \
                     URL prefix to the epiceditor JS and CSS Statics")
 
-    def __init__(self, configs=None, *args, **kwargs):
+    def __init__(self, configs=None, max_length=None, *args, **kwargs):
         super(EpicEditorWidget, self).__init__(*args, **kwargs)
         # Setup config from defaults.
         self.config = DEFAULT_EPICEDITOR_CONFIG.copy()
+        self.maxlength = max_length
 
         # Try to get valid config from settings.
         settings_configs = getattr(settings, 'EPICEDITOR_CONFIGS', None)
@@ -87,6 +88,7 @@ class EpicEditorWidget(forms.Textarea):
             'parser': self.config['parser'],
             'field_id': final_attrs['id'],
             'editor_id': final_attrs['id'].replace('-', '_'),
-            'value': conditional_escape(force_unicode(value)),
-            'config': json.JSONEncoder().encode(self.config)
+            'value': conditional_escape(force_text(value)),
+            'config': json.JSONEncoder().encode(self.config),
+            'maxlength': None #Not supported by EpicEditor: self.maxlength
         }))
