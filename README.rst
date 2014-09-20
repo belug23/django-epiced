@@ -77,6 +77,12 @@ associated with the field https://github.com/shaunsephton/django-ckeditor
 History
 -------
 
+*0.4.0* ::
+ 
+    - Added support for Django 1.7
+    - Added support for Django 1.7 Migrations (Ugly patch)
+    - Added support for Python 3
+
 *0.3.1* ::
 
     - Updated to Epic Editor 0.2.2
