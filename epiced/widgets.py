@@ -71,7 +71,7 @@ class EpicEditorWidget(forms.Textarea):
         self.maxlength = max_length
 
         # Try to get valid config from settings.
-        settings_configs = getattr(settings, 'EPICEDITOR_CONFIGS', None)
+        settings_configs = getattr(settings, 'EPICEDITOR_CONFIG', None)
         if settings_configs:
             self.config.update(settings_configs)
         if configs:

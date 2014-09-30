@@ -77,6 +77,10 @@ associated with the field https://github.com/shaunsephton/django-ckeditor
 History
 -------
 
+*0.4.1* ::
+ 
+    - Fixed issue #9 thet would prevent the settings config to override the default config
+
 *0.4.0* ::
  
     - Added support for Django 1.7
