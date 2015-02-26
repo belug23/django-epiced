@@ -77,9 +77,13 @@ associated with the field https://github.com/shaunsephton/django-ckeditor
 History
 -------
 
+*0.4.2* ::
+ 
+    - Fixed issue #10 A leftover debugging print
+
 *0.4.1* ::
  
-    - Fixed issue #9 thet would prevent the settings config to override the default config
+    - Fixed issue #9 that would prevent the settings config to override the default config
 
 *0.4.0* ::
  
