@@ -31,7 +31,6 @@ documentation for more information''')
     def deconstruct(self):
         name, path, args, kwargs = super(EpicEditorField, self).deconstruct()
         path = 'django.db.models.TextField'
-        print name, path, args, kwargs
         return name, path, args, kwargs
 
     def contribute_to_class(self, cls, name):
