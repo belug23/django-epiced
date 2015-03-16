@@ -2716,7 +2716,7 @@ Parser.prototype.tok = function() {
       }
       body += '</tbody>\n';
 
-      return '<table>\n'
+      return '<table class="table table-striped">\n'
         + body
         + '</table>\n';
     }
