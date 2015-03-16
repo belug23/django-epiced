@@ -127,7 +127,6 @@
     , rel: 'stylesheet'
     , href: path
     , name: path
-    , media: 'screen'
     });
 
     headID.appendChild(cssNode);
