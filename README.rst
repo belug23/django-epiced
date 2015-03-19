@@ -40,7 +40,7 @@ Quick start
     from epiced.models import EpicEditorField
 
     class Post(models.Model):
-        article = EpicEditorField()
+        article = EpicEditorField(markdown_config={'extensions': ['markdown.extensions.tables']})
 
 4. Sync your database ::
 
