@@ -2,13 +2,16 @@
 EpicEd
 ======
 
-EpicEd is a markdown field with the default widjet using EpicEditor.js
+EpicEd is a markdown field with the default widget using EpicEditor.js
 http://epiceditor.com/
 
 This plugin is made to keep a much as possible the possibilities to overide
 EpicEditor.js configurations the only settings you'll not be able to edit
 are 'container' and 'textarea' since they are rewriten by the wideget and
 are needed to save the data to the database.
+
+This version is based upon belug23's work, with modification to suit Savings Champions needs.
+It opens up the possibility to configure the underlying Markdown instance on a field by field basis.
 
 Warning
 -------
@@ -37,7 +40,7 @@ Quick start
     from epiced.models import EpicEditorField
 
     class Post(models.Model):
-        article = EpicEditorField()
+        article = EpicEditorField(markdown_config={'extensions': ['markdown.extensions.tables']})
 
 4. Sync your database ::
 

@@ -127,7 +127,6 @@
     , rel: 'stylesheet'
     , href: path
     , name: path
-    , media: 'screen'
     });
 
     headID.appendChild(cssNode);
@@ -2717,7 +2716,7 @@ Parser.prototype.tok = function() {
       }
       body += '</tbody>\n';
 
-      return '<table>\n'
+      return '<table class="table table-striped">\n'
         + body
         + '</table>\n';
     }
