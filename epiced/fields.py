@@ -4,9 +4,9 @@ import logging
 from django.db import models
 from django import forms
 
-from .widgets import EpicEditorWidget
-
 from markdown import markdown
+
+from .widgets import EpicEditorWidget
 
 logger = logging.getLogger(__name__)
 
@@ -18,10 +18,10 @@ class EpicEditorField(models.TextField):
         safe_mode = kwargs.pop('safe_mode', 'escape')
         if allow_html is not True:
             self._markdown_safe = allow_html
-            logger.warning(
-                '''The EpicEditorField parameter allow_html is now deprecated
-due to security problemes. Please replace it by safe_mode. Read the
-documentation for more information''')
+            logger.warning('''The EpicEditorField parameter allow_html\
+            is now deprecated due to security problems. Please \
+            replace it by safe_mode. Read the\
+            documentation for more information''')
         else:
             self._markdown_safe = safe_mode
         self._html_field_suffix = kwargs.pop('html_field_suffix', '_html')
@@ -34,7 +34,7 @@ documentation for more information''')
         return name, path, args, kwargs
 
     def contribute_to_class(self, cls, name):
-        self._html_field = "%s%s" % (name, self._html_field_suffix)
+        self._html_field = "%s%s" % (name, self._html_field_suffix)  # noqa
         models.TextField(editable=False).contribute_to_class(
             cls, self._html_field)
         super(EpicEditorField, self).contribute_to_class(cls, name)
@@ -60,13 +60,7 @@ documentation for more information''')
 class EpicEditorFormField(forms.fields.Field):
 
     def __init__(self, configs=None, *args, **kwargs):
-        #Support for the max_length option Django 1.7
+        # Support for the max_length option Django 1.7
         max_length = kwargs.pop('max_length', None)
         kwargs.update({'widget': EpicEditorWidget(configs=configs, max_length=max_length)})
         super(EpicEditorFormField, self).__init__(*args, **kwargs)
-
-try:
-    from south.modelsinspector import add_introspection_rules
-    add_introspection_rules([], ["^epiced\.fields\.EpicEditorField"])
-except:
-    pass

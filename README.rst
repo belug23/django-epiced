@@ -43,10 +43,6 @@ Quick start
 
     python manage.py syncdb
 
-    OR with south ::
-
-    python manage.py schemamigration ...
-
 5. Create an admin page or a form template.
 
 6. Now you should have the EpicEditor in your admin and/or template.
