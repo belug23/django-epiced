@@ -1,3 +1,5 @@
+from django import VERSION as DJANGO_VERSION
+
 from django import forms
 from django.conf import settings
 from django.template.loader import render_to_string
@@ -5,9 +7,9 @@ from django.utils.safestring import mark_safe
 from django.utils.html import conditional_escape
 from django.utils.encoding import force_text
 from django.core.exceptions import ImproperlyConfigured
-try:
+if DJANGO_VERSION >= (1, 8):
     from django.forms.utils import flatatt
-except ImportError: # Django < 1.8 compatibility
+else: # Django < 1.8 compatibility
     from django.forms.util import flatatt
 import json
 
