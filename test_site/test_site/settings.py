@@ -5,7 +5,6 @@ from django import VERSION as DJANGO_VERSION
 if DJANGO_VERSION >= (1, 11):
     POSTGRESQL_BACKEND = 'django.db.backends.postgresql'
 else:
-    # Remove if migrated to Django 1.8
     POSTGRESQL_BACKEND = 'django.db.backends.postgresql_psycopg2'
 
 # here() gives us file paths from the root of the system to the directory
