@@ -12,11 +12,12 @@ from django.core.exceptions import ImproperlyConfigured
 
 if DJANGO_VERSION >= (1, 8):
     from django.forms.utils import flatatt
-else: # Django < 1.8 compatibility
+else:  # Django < 1.8 compatibility
     from django.forms.util import flatatt
 
 
 DEFAULT_EPICEDITOR_CONFIG = {
+
     "container": 'epiceditor',
     "textarea": None,
     "basePath": settings.STATIC_URL + 'epiced',
@@ -76,7 +77,7 @@ class EpicEditorWidget(forms.Textarea):
         super(EpicEditorWidget, self).__init__(*args, **kwargs)
         # Setup config from defaults.
         self.config = DEFAULT_EPICEDITOR_CONFIG.copy()
-        self.maxlength = max_length
+        self.max_length = max_length
 
         # Try to get valid config from settings.
         settings_configs = getattr(settings, 'EPICEDITOR_CONFIG', None)
@@ -86,17 +87,21 @@ class EpicEditorWidget(forms.Textarea):
             self.config.update(configs)
 
     def render(self, name, value, attrs={}):
+
         if value is None:
             value = ''
         final_attrs = self.build_attrs(attrs, name=name)
+
         self.config['container'] = "%s_epiceditor" % (final_attrs['id'], )
         self.config['textarea'] = final_attrs['id']
-        return mark_safe(render_to_string('epiced/widget.html', {
-            'final_attrs': flatatt(final_attrs),
-            'parser': self.config['parser'],
-            'field_id': final_attrs['id'],
-            'editor_id': final_attrs['id'].replace('-', '_'),
-            'value': conditional_escape(force_text(value)),
-            'config': json.JSONEncoder().encode(self.config),
-            'maxlength': None #Not supported by EpicEditor: self.maxlength
+
+        return mark_safe(
+            render_to_string('epiced/widget.html', {
+                'final_attrs': flatatt(final_attrs),
+                'parser': self.config['parser'],
+                'field_id': final_attrs['id'],
+                'editor_id': final_attrs['id'].replace('-', '_'),
+                'value': conditional_escape(force_text(value)),
+                'config': json.JSONEncoder().encode(self.config),
+                'maxlength': None  # Not supported by EpicEditor: self.max_length
         }))
