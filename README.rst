@@ -73,6 +73,10 @@ associated with the field https://github.com/shaunsephton/django-ckeditor
 History
 -------
 
+*0.4.3* ::
+ 
+    - Updated support to Django 1.11
+    
 *0.4.2* ::
  
     - Fixed issue #10 A leftover debugging print
