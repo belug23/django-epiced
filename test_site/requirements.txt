@@ -1,5 +1,6 @@
-Django==1.11.11
+Django<=1.11.11,>=1.8
 Markdown
-distribute
-django-epiced==0.4.2
+django-epiced==0.3.0
 psycopg2==2.7.3
+codecov<2.1,>=2.0.5
+coverage<4.4,>=4.3.4
