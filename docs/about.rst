@@ -18,8 +18,8 @@ To install from source ::
 
 From source::
 
-    wget https://github.com/belug23/django-epiced/archive/0.2.tar.gz
-    tar -zxvf 0.2.tar.gz
+    wget https://github.com/belug23/django-epiced/archive/0.3.0.tar.gz
+    tar -zxvf 0.3.0.tar.gz
     cd django-epiced
     python setup.py install
 
