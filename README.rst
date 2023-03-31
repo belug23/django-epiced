@@ -1,4 +1,10 @@
 ======
+warning DEPRECATION WARNING
+======
+
+This repository is no longer actively maintained.
+
+======
 EpicEd
 ======
 
