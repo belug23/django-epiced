@@ -9,7 +9,7 @@ EpicEd
 ======
 
 EpicEd is a markdown field with the default widjet using EpicEditor.js
-http://epiceditor.com/
+it was hosted on  epiceditor dot com but it looks like ownership had changed since then.
 
 This plugin is made to keep a much as possible the possibilities to overide
 EpicEditor.js configurations the only settings you'll not be able to edit
@@ -68,7 +68,7 @@ Thanks
 I'd like to thank John Gruber and Aaron Swartz.for the markdown language
 http://daringfireball.net/projects/markdown/
 
-Thanks to Oscar Godson and John Donahue for EpicEditor : http://epiceditor.com/
+Thanks to Oscar Godson and John Donahue for EpicEditor.
 
 Thanks to carljm creator of this snippet :
 http://djangosnippets.org/snippets/882/ used to complete the EpicEditorField
